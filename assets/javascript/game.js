@@ -1,9 +1,9 @@
     // To store and displayer player letter choice
-    var letterGuess 
-        document.onkeyup = function(event) {
-            console.log("working")
-            letterGuess.textContent = event.key;
-        }  
+    var letterGuess = event.key
+        // document.onkeyup = function(event) {
+        //     console.log("working")
+        //     letterGuess.textContent = event.key;
+        // }  
     // Calculates guesses and number remaining
     var guessesLeft
 

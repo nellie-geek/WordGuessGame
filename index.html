@@ -5,25 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script type="text.javascript" scr="assets/javascript/game.js"></script>
+
     <title>Hangman</title>
 </head>
 
 <body>
-    <h1>Hangman</h1>
-    <p>Click the charaters below to guess the correct word.</p>
-        <br><br>
-    <h2>Wins:
-        <br><br>
-        Guesses Remaining:</h2> 
+        <div>
+            <h1 id = "game">Hangman</h1>
+            <h2 id = "directions">Click a letter to correctly guess the word below.</h2>
+                <br>
+            <h3>
+                <p id = "wins-text">Wins:</p>
+                <br>
+                <p id = "guesses-remaining">Guesses Remaining:</p>
+                <br>
+                <p id = "letterGuess">You've guessed letters:</p>    
+            </h3>
+        </div>
 
-    <script>
     
+
+
+    <script scr="assets/javascript/game.js">
     
-    var letterGuess 
-        document.onkeyup = function(event) {
+        var fruits = ["apple", "orange", "strawberry", "mango", "kiwi", "pomegranate", "banana", "grapes", "cherries", "watermelon", "kumquat", "blackberry", "papaya", "fig", "boysenberry", "lime", "lemon", "cranberry"]
+        
+        var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+            // letters.toLowerCase()
+        var fruit = fruits[Math.floor(Math.random() * fruits.length)];
+        var wins = 0;     
+        var answerArray = [];
+    
+        for (var i = 0; i < fruits.length; i++) {
+            answerArray[i] = "_";
+
+        }
+        
+            document.onkeyup = function(event) {
             console.log("working")
+            var letterGuess = event.key;
+            alert("Letter guessed " + event.key)
+            
+            if (letterGuess === letters){
+
+            } 
             letterGuess.textContent = event.key;
+
         }  
     
     

@@ -3,22 +3,11 @@ h1 {
     font-size: 36px;
     color: black;
     padding: 25px;
-    background: rgba(250, 29, 29, 0.479);
+    background: rgb(122, 2, 2);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-p {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 18px; 
-    font-display: bold;
 }
 
 body {
     background: gray;
     text-align: center;
-}
-
-h2 {
-    font-size: 16px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
