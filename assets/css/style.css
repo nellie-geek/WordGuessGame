@@ -1,0 +1,12 @@
+h1 {
+    text-align: inherit;
+    font-size: 36px;
+    color: black;
+    padding: 25px;
+    background: rgba(250, 29, 29, 0.479)
+}
+
+body {
+    background: gray;
+    text-align: center;
+}
