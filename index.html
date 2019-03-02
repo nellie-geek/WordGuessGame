@@ -12,13 +12,19 @@
 <body>
     <h1>Hangman</h1>
     <p>Click the charaters below to guess the correct word.</p>
-    <h2>Wins:</h2>
-    Guesses Remaining: 
+        <br><br>
+    <h2>Wins:
+        <br><br>
+        Guesses Remaining:</h2> 
 
     <script>
     
     
-    
+    var letterGuess 
+        document.onkeyup = function(event) {
+            console.log("working")
+            letterGuess.textContent = event.key;
+        }  
     
     
     

@@ -1,6 +1,9 @@
     // To store and displayer player letter choice
     var letterGuess 
-
+        document.onkeyup = function(event) {
+            console.log("working")
+            letterGuess.textContent = event.key;
+        }  
     // Calculates guesses and number remaining
     var guessesLeft
 
@@ -9,6 +12,7 @@
 
     // Array of letters to pick from
     var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+    letters.toLowerCase()
 
     // Pick random fruit from fruits array
     var fruit = fruits[Math.floor(Math.random() * fruits.length)]
@@ -24,18 +28,19 @@
     
     //get guess 
     var letterGuess = onkeyup()
+    append 
 
 //     for (i = 0; i , letters.length; i++) {
 
 // }
 
 // if {
-//     letterGuess === letterwithinword
-//     displayletter in correctposition
+//     letterGuess === letter within word
+//     display letter in correct position
 // } else if {
 //     fruit[i] === (letterGuess) 
 //     display in picks
-//     -1 on guessesremaining
+//     -1 on guesses remaining
 // }
 
 
@@ -45,8 +50,7 @@
 // }
 
 // if {
-//     display word in dashes based on length
 //     add letter in correct position upon keyup event 
 // } else {
-//     verify word if letter !== spot in word add to guessed and -1 on remaining
+//     verify word - if letter !== character in word add to guessed and -1 on remaining
 // }
