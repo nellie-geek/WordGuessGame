@@ -1,56 +1,54 @@
-    // To store and displayer player letter choice
-    var letterGuess = event.key
-        // document.onkeyup = function(event) {
-        //     console.log("working")
-        //     letterGuess.textContent = event.key;
-        // }  
-    // Calculates guesses and number remaining
-    var guessesLeft
-
-    // Array of words
-    var fruits = ["apple", "orange", "strawberry", "mango", "kiwi", "pomegranate", "banana", "grapes", "cherries", "watermelon", "kumquat", "blackberry", "papaya", "fig", "boysenberry", "lime", "lemon", "cranberry"]
-
-    // Array of letters to pick from
-    var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-    letters.toLowerCase()
-
-    // Pick random fruit from fruits array
-    var fruit = fruits[Math.floor(Math.random() * fruits.length)]
-    console.log(fruit)
-
-    // sets answer array to show dashes for letters in the word
+    //Variables  
+    var fruits = ["apple", "orange", "strawberry", "mango", "kiwi", "pomegranate", "banana", "grapes", "cherries", "watermelon", "kumquat", "blackberry", "papaya", "fig", "boysenberry", "lime", "lemon", "cranberry"];    
+    var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];       
+    var fruit = fruits[Math.floor(Math.random() * fruits.length)];
+    var wins = 0; 
+    var guessLeft = 10;
     var answerArray = [];
-    for (var i = 0; i < fruits.length; i++) {
-        answerArray[i] = "_";
+
+    // Variables to point to HTML element to input value.
+    var winsText = document.getElementById("wins-text");
+    var guessesleftText = document.getElementById("guesses-left-text");
+    var lossesText = document.getElementById("letterGuess");
+    var wordDis = document.getElementById("fruit");
+
+    //Processes
+    function getWord(var i = 0; i < fruit.length; i++) {    
+
+        var fruits = [];
+            for (var i = 0; i < fruit.length; i++) {
+                answerArray[i] = "_";
+                document.getElementById(fruit).innerHTML = fruits[Math.floor(Math.random() * fruits.length)]
+            }
+    
+        for (var i = 0; i < fruit.length; i++) {
+            answerArray[i] = "_";
+        
+            document.onkeyup = function(event) {
+            console.log("working")
+            var letterGuess = event.key;
+                        
+            
+            if (letterGuess === answerArray) {
+                letterGuess.textContent = event.key;
+                
+                } 
+        
+            }  
+        }
+            if (remainingGuesses > 0){
+            answerArray.join(" ")
+        
+            var letterGuess = onkeyup.event
+                    
+            //check letter to word
+            for (var i = 0; i < word.length; i++) {
+                //in the word index
+                if (word[i] === letterGuess) {
+                    answerArray[i] = letterGguess;
+                    guessleft--;
+                }
+            }
+        
+        }
     }
-    
-    //   PROCESSES
-    
-    //get guess 
-    var letterGuess = onkeyup()
-    append 
-
-//     for (i = 0; i , letters.length; i++) {
-
-// }
-
-// if {
-//     letterGuess === letter within word
-//     display letter in correct position
-// } else if {
-//     fruit[i] === (letterGuess) 
-//     display in picks
-//     -1 on guesses remaining
-// }
-
-
-
-// for (i = 0; i < fruits.length; i++) {
-
-// }
-
-// if {
-//     add letter in correct position upon keyup event 
-// } else {
-//     verify word - if letter !== character in word add to guessed and -1 on remaining
-// }
